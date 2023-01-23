@@ -18,3 +18,8 @@ services:
       - "./pgadmin_data:/var/lib/pgadmin:rw"
     ports:
       - "8080:80"
+  ingest-data:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    command: bash cmd_docker.sh
